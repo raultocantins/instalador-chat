@@ -28,7 +28,6 @@ fi
 
 # this file has passwords
 sudo su - root <<EOF
-sudo apt remove needrestart
 chown root:root "${PROJECT_ROOT}"/config
 chmod 700 "${PROJECT_ROOT}"/config
 EOF
