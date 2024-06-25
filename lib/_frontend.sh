@@ -92,7 +92,7 @@ sudo su - deploy << EOF
   cat <<[-]EOF > /home/deploy/${instancia_add}/frontend/.env
 REACT_APP_BACKEND_URL=${backend_url}
 REACT_APP_HOURS_CLOSE_TICKETS_AUTO = 24
-SERVER_PORT = ${frontend_port}
+PORT = ${frontend_port}
 REACT_APP_PAGE_TITLE=${instancia_add}
 [-]EOF
 EOF
@@ -110,7 +110,7 @@ app.use(express.static(path.join(__dirname, "build")));
 app.get("/*", function (req, res) {
 	res.sendFile(path.join(__dirname, "build", "index.html"));
 });
-app.listen(process.env.SERVER_PORT || 3333);
+app.listen(process.env.PORT || 3333);
 
 [-]EOF
 EOF
